@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog desu | <%= title %></title>
+</head> -->
+<%- include('./partials/head.ejs') %>
+<body>
+    <h1>Create</h1>
+    <!-- <nav>
+        <div class="site-title">
+            <a><h1>Blog Desu</h1></a>
+            <p>a desu site</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a>
+           <li> <a href="/about">about page</a></li>
+           <li> <a href="/blogs/create">New Blogs</a></li>
+        </ul>
+        </nav> -->
+        <%- include('./partials/nav.ejs') %>
+    <div class="create-blog content">
+        <form>
+          <label for="title">Blog title:</label>
+          <input type="text" id="title" name="title" required>
+          <label for="snippet">Blog snippet:</label>
+          <input type="text" id="snippet" name="snippet" required>
+          <label for="body">Blog body:</label>
+          <textarea id="body" name="body" required></textarea>
+          <button>Submit</button>
+        </form>
+      </div>
+      <%- include('./partials/footer.ejs') %>
+</body>
+</html>

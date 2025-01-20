@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog desu | <%= title %></title>
+</head> -->
+    <%- include('./partials/head.ejs') %> 
+<body>
+    <h1>Home</h1>
+       <!-- <nav>
+        <div class="site-title">
+            <a><h1>Blog Desu</h1></a>
+            <p>a desu site</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a>
+           <li> <a href="/about">about page</a></li>
+           <li> <a href="/blogs/create">New Blogs</a></li>
+        </ul>
+        </nav> -->
+     <%- include('./partials/nav.ejs') %>   <!--instade of the above nav contant use shortly this-->
+        <div class="blogs content">
+           <h2>All Blogs</h2> 
+        </div>
+        <%- include('./partials/footer.ejs') %>
+</body>
+</html>
