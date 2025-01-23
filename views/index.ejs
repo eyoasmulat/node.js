@@ -20,9 +20,21 @@
         </ul>
         </nav> -->
      <%- include('./partials/nav.ejs') %>   <!--instade of the above nav contant use shortly this-->
-        <div class="blogs content">
-           <h2>All Blogs</h2> 
-        </div>
+     <div class="blogs content">
+        <h2>All Blogs</h2> 
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %> <!-- Changed 'blogs' to 'blog' for clarity -->
+            <a class="single" href="/blogs/:id <$= blog_id %>">
+                <h3 class="title"><%= blog.title %></h3><br>
+                <p class="snippet"><%= blog.snippet %></p>
+            </a>
+                 <!-- Fixed typo from 'snippt' to 'snippet' -->
+            <% }) %>
+        <% } else { %>
+            <p>There are no blogs to display.</p> <!-- Fixed capitalization for consistency -->
+        <% } %>
+    </div>
+
         <%- include('./partials/footer.ejs') %>
 </body>
 </html>
